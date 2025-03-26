@@ -1,0 +1,23 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp; [![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]",
+  "homepage": "https://github.com/FRC-8193/Website#readme",
+  "bugs": {
+    "url": "https://github.com/FRC-8193/Website/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FRC-8193/Website.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "3.5.3"
+  }
+}
