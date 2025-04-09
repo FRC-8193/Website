@@ -1,11 +1,9 @@
-gyoni25:
-   name: Mark G
-
-author2:
-   name: Author 2
-
-author3:
-   name: Author 3
-
-author4:
-   name: Author 4
+authors:
+  - key: gyoni25
+    name: Mark G
+  - key: author2
+    name: Author 2
+  - key: author3
+    name: Author 3
+  - key: author4
+    name: Author 4

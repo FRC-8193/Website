@@ -23,9 +23,11 @@ collections:
           name: "author", 
           widget: "relation",
           collection: "authors",
-          value_field: "{{key}}",
-          search_fields: ["{{key}}", "name"],
-          display_fields: ["name"]
+          file: "authors",
+          value_field: "key",
+          search_fields: ["key", "name"],
+          display_fields: ["name"],
+          options_length: 50
         }
       - { label: "Categories", name: "categories", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
@@ -41,13 +43,15 @@ collections:
           preview: false
         fields:
           - label: "Authors"
-            name: "authors_list"
-            widget: "list"
-            collapsed: false
-            summary: "{{fields.name}}"
-            field: {label: Author ID, name: key, widget: string}
+            name: "authors"
+            widget: "object"
             fields:
-              - {label: "Name", name: "name", widget: "string"}
+              - label: "Author Entries"
+                name: "authors_entries"
+                widget: "list"
+                fields:
+                  - {label: "Username", name: "key", widget: "string"}
+                  - {label: "Display Name", name: "name", widget: "string"}
 
   - name: "pages"
     label: "Pages"
