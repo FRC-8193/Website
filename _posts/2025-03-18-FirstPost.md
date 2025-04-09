@@ -1,7 +1,7 @@
 ---
 title: First Post
-date: 2025-03-18 09:00:00 -0400
-author: markgyoni
+date: 2025-04-08T17:10:00
+author: gyoni25
 categories:
   - FRC
   - Steel Stingers
