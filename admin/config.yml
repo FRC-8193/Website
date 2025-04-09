@@ -18,9 +18,36 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Author", name: "author", widget: "string" }
+      - { 
+          label: "Author", 
+          name: "author", 
+          widget: "relation",
+          collection: "authors",
+          value_field: "{{key}}",
+          search_fields: ["{{key}}", "name"],
+          display_fields: ["name"]
+        }
       - { label: "Categories", name: "categories", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "authors"
+    label: "Authors"
+    files:
+      - label: "Author Information"
+        name: "authors"
+        file: "_data/authors.yml"
+        format: "yml"
+        editor:
+          preview: false
+        fields:
+          - label: "Authors"
+            name: "authors_list"
+            widget: "list"
+            collapsed: false
+            summary: "{{fields.name}}"
+            field: {label: Author ID, name: key, widget: string}
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
 
   - name: "pages"
     label: "Pages"
