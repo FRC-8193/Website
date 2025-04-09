@@ -18,40 +18,27 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { 
-          label: "Author", 
-          name: "author", 
-          widget: "relation",
-          collection: "authors",
-          file: "authors",
-          value_field: "key",
-          search_fields: ["key", "name"],
-          display_fields: ["name"],
-          options_length: 50
-        }
+      - { label: "Author", name: "author", widget: "string"}
       - { label: "Categories", name: "categories", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
-
+  
   - name: "authors"
     label: "Authors"
+    editor:
+      preview: false
     files:
-      - label: "Author Information"
+      - label: "Authors"
         name: "authors"
         file: "_data/authors.yml"
-        format: "yml"
-        editor:
-          preview: false
         fields:
-          - label: "Authors"
+          - label: "Author List"
             name: "authors"
-            widget: "object"
+            widget: "list"
+            summary: "{{fields.name}}"
+            add_to_top: true
             fields:
-              - label: "Author Entries"
-                name: "authors_entries"
-                widget: "list"
-                fields:
-                  - {label: "Username", name: "key", widget: "string"}
-                  - {label: "Display Name", name: "name", widget: "string"}
+              - {label: "Author ID", name: "author_id", widget: "string", hint: "Your school email prefix."}
+              - {label: "Name", name: "name", widget: "string", hint: "Your first name and last initial."}
 
   - name: "pages"
     label: "Pages"
