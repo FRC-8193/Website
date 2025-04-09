@@ -1,34 +1,36 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: FRC-8193/Website
+  site_domain: frc-8193.markgyoni.dev
   branch: main
-media_folder: 'assets/uploads'
+media_folder: "assets"
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: '_posts/'
+  - name: "blog"
+    label: "Blog"
+    folder: "_posts/"
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
     fields:
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: 'pages'
-    label: 'Pages'
+  - name: "pages"
+    label: "Pages"
     editor:
       preview: false
     files:
-      - label: 'Contact Page'
-        name: 'contact'
-        file: '_tabs/contact.md'
+      - label: "Contact Page"
+        name: "contact"
+        file: "_tabs/contact.md"
         fields:
-        - { label: 'Title', name: 'title', widget: 'hidden', default: 'home' }
-      - label: 'Home Page'
-        name: 'index'
-        file: 'index.md'
+          - { label: "Title", name: "title", widget: "hidden", default: "home" }
+      - label: "Home Page"
+        name: "index"
+        file: "index.md"
         fields:
-        - { label: 'Title', name: 'title', widget: 'hidden', default: 'home' }
+          - { label: "Title", name: "title", widget: "hidden", default: "home" }
