@@ -3,6 +3,7 @@ backend:
   repo: FRC-8193/Website
   site_domain: frc-8193.markgyoni.dev
   branch: main
+  base_url: https://sveltia-cms-auth.markgyoni.workers.dev
 media_folder: "assets"
 
 collections:
