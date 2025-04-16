@@ -3,7 +3,7 @@ backend:
   repo: FRC-8193/Website
   site_domain: frc-8193.markgyoni.dev
   branch: main
-  base_url: https://sveltia-cms-auth.markgyoni.workers.dev
+  base_url: https://sveltia-cms-auth.frc8193.workers.dev
 media_folder: "assets"
 
 collections:
@@ -18,10 +18,10 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Author", name: "author", widget: "string"}
+      - { label: "Author", name: "author", widget: "string" }
       - { label: "Categories", name: "categories", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
-  
+
   - name: "authors"
     label: "Authors"
     editor:
@@ -37,8 +37,18 @@ collections:
             summary: "{{fields.name}}"
             add_to_top: true
             fields:
-              - {label: "Author ID", name: "author_id", widget: "string", hint: "Your school email prefix."}
-              - {label: "Name", name: "name", widget: "string", hint: "Your first name and last initial."}
+              - {
+                  label: "Author ID",
+                  name: "author_id",
+                  widget: "string",
+                  hint: "Your school email prefix.",
+                }
+              - {
+                  label: "Name",
+                  name: "name",
+                  widget: "string",
+                  hint: "Your first name and last initial.",
+                }
 
   - name: "pages"
     label: "Pages"
